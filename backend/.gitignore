@@ -1,0 +1,18 @@
+# Build
+target/
+build/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Compiled
+*.class
+*.jar
+*.war
+
+# IDE
+.idea/
+.settings/
+.project
+.classpath
+
+# Application
+application-local.properties
