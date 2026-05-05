@@ -1,0 +1,456 @@
+/* ============================================
+   DARK THEME - MISSION IMPOSSIBLE STYLE
+   Global styles for all components
+   ============================================ */
+
+/* Import futuristic font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&display=swap');
+
+/* Global Background */
+body {
+  background: #0a0e1a !important;
+  color: #e0e6ed !important;
+}
+
+/* ========== STAT CARDS ========== */
+.stat-card {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border: 1px solid rgba(0, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.1) inset !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.stat-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 30px rgba(0, 255, 255, 0.4), 0 0 60px rgba(0, 255, 255, 0.2) inset !important;
+  border-color: #00ffff !important;
+}
+
+.stat-icon {
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.6));
+  position: relative;
+  z-index: 1;
+}
+
+.stat-value {
+  color: #00ffff !important;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.4) !important;
+  font-family: 'Orbitron', monospace !important;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-label {
+  color: #94a3b8 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== TABLES ========== */
+.table-container {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border: 1px solid rgba(0, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2) !important;
+}
+
+.data-table thead {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  border-bottom: 2px solid #00ffff !important;
+}
+
+.data-table th {
+  color: #00ffff !important;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6) !important;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3) !important;
+  font-family: 'Orbitron', monospace !important;
+  letter-spacing: 1px;
+}
+
+.data-table tbody tr {
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1) !important;
+  transition: all 0.3s ease;
+}
+
+.data-table tbody tr:hover {
+  background: rgba(0, 255, 255, 0.05) !important;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1) inset !important;
+}
+
+.data-table td {
+  color: #cbd5e1 !important;
+}
+
+.pilot-name strong,
+.fleet-item-name,
+.data-table td strong {
+  color: #00ffff !important;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+}
+
+/* ========== FORMS ========== */
+.form-card {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border: 1px solid rgba(0, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2) !important;
+}
+
+.form-card h3 {
+  color: #00ffff !important;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6) !important;
+  font-family: 'Orbitron', monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+  padding-bottom: 0.75rem;
+}
+
+.form-group label {
+  color: #00ffff !important;
+  text-transform: uppercase;
+  font-size: 0.8rem !important;
+  letter-spacing: 1px;
+  font-family: 'Courier New', monospace;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: #0f172a !important;
+  border: 1px solid rgba(0, 255, 255, 0.3) !important;
+  color: #e0e6ed !important;
+  font-family: 'Courier New', monospace;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #00ffff !important;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3) !important;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #475569 !important;
+  opacity: 0.7;
+}
+
+.form-hint {
+  color: #64748b !important;
+  font-family: 'Courier New', monospace;
+}
+
+/* ========== STATUS BADGES ========== */
+.status-badge {
+  border: 1px solid currentColor !important;
+  box-shadow: 0 0 10px currentColor !important;
+  font-family: 'Courier New', monospace !important;
+  font-weight: 700 !important;
+}
+
+.status-available,
+.status-active {
+  background: rgba(34, 197, 94, 0.2) !important;
+  color: #4ade80 !important;
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.8) !important;
+}
+
+.status-in_flight,
+.status-in_progress {
+  background: rgba(59, 130, 246, 0.2) !important;
+  color: #60a5fa !important;
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.8) !important;
+}
+
+.status-maintenance {
+  background: rgba(251, 191, 36, 0.2) !important;
+  color: #fbbf24 !important;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.8) !important;
+}
+
+.status-offline,
+.status-inactive,
+.status-cancelled,
+.status-aborted {
+  background: rgba(239, 68, 68, 0.2) !important;
+  color: #f87171 !important;
+  text-shadow: 0 0 10px rgba(248, 113, 113, 0.8) !important;
+}
+
+.status-charging,
+.status-reserved,
+.status-planned,
+.status-scheduled {
+  background: rgba(148, 163, 184, 0.2) !important;
+  color: #94a3b8 !important;
+  text-shadow: 0 0 10px rgba(148, 163, 184, 0.8) !important;
+}
+
+.status-completed {
+  background: rgba(16, 185, 129, 0.2) !important;
+  color: #34d399 !important;
+  text-shadow: 0 0 10px rgba(52, 211, 153, 0.8) !important;
+}
+
+/* ========== EMPTY STATES ========== */
+.empty-state {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border: 1px solid rgba(0, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2) !important;
+}
+
+.empty-icon {
+  filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.5));
+}
+
+.empty-state h3 {
+  color: #00ffff !important;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6) !important;
+}
+
+.empty-state p,
+.no-drones {
+  color: #94a3b8 !important;
+}
+
+/* ========== ACTION BUTTONS ========== */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-action {
+  background: transparent !important;
+  font-family: 'Courier New', monospace !important;
+  text-transform: uppercase;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-view,
+.btn-action {
+  color: #00ffff !important;
+  border-color: #00ffff !important;
+}
+
+.btn-view:hover,
+.btn-action:hover {
+  background: rgba(0, 255, 255, 0.1) !important;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4) !important;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8) !important;
+}
+
+.btn-delete {
+  color: #ff6b6b !important;
+  border-color: #ff6b6b !important;
+}
+
+.btn-delete:hover {
+  background: rgba(255, 107, 107, 0.1) !important;
+  box-shadow: 0 0 15px rgba(255, 107, 107, 0.4) !important;
+  text-shadow: 0 0 10px rgba(255, 107, 107, 0.8) !important;
+}
+
+.btn-start {
+  color: #4ade80 !important;
+  border-color: #4ade80 !important;
+}
+
+.btn-start:hover {
+  background: rgba(74, 222, 128, 0.1) !important;
+  box-shadow: 0 0 15px rgba(74, 222, 128, 0.4) !important;
+}
+
+.btn-complete {
+  color: #34d399 !important;
+  border-color: #34d399 !important;
+}
+
+.btn-complete:hover {
+  background: rgba(52, 211, 153, 0.1) !important;
+  box-shadow: 0 0 15px rgba(52, 211, 153, 0.4) !important;
+}
+
+/* ========== LICENSE CODE ========== */
+.license-code {
+  background: #0f172a !important;
+  border: 1px solid rgba(0, 255, 255, 0.3) !important;
+  color: #00ffff !important;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.6) !important;
+}
+
+/* ========== MISSION DESCRIPTION ========== */
+.mission-description {
+  color: #64748b !important;
+}
+
+.mission-type {
+  background: rgba(0, 255, 255, 0.1) !important;
+  border: 1px solid rgba(0, 255, 255, 0.3) !important;
+  color: #00ffff !important;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+}
+
+/* ========== STATS SECTIONS ========== */
+.pilots-stats,
+.missions-stats {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border: 1px solid rgba(0, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2) !important;
+}
+
+.stat-item {
+  border-right: 1px solid rgba(0, 255, 255, 0.2);
+  padding-right: 2rem;
+}
+
+.stat-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+/* ========== MAP SECTION ========== */
+.map-section,
+.fleet-status-section {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border: 1px solid rgba(0, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2) !important;
+}
+
+.map-section h3,
+.fleet-status-section h3 {
+  color: #00ffff !important;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6) !important;
+  font-family: 'Orbitron', monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+  padding-bottom: 0.75rem;
+}
+
+.map-container {
+  background: #0a0e1a !important;
+  border: 2px solid rgba(0, 255, 255, 0.3) !important;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2) inset !important;
+}
+
+.map-placeholder {
+  background: radial-gradient(circle at center, #0f172a 0%, #0a0e1a 100%);
+}
+
+/* ========== FLEET ITEMS ========== */
+.fleet-item {
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1) !important;
+  transition: all 0.3s ease;
+}
+
+.fleet-item:hover {
+  background: rgba(0, 255, 255, 0.05) !important;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1) inset !important;
+}
+
+.fleet-item-model {
+  color: #64748b !important;
+}
+
+.fleet-stat-label {
+  color: #64748b !important;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.fleet-stat-value {
+  color: #00ffff !important;
+  font-family: 'Orbitron', monospace;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+}
+
+/* ========== SCROLLBAR FOR FLEET LIST ========== */
+.fleet-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.fleet-list::-webkit-scrollbar-track {
+  background: #0f172a;
+  border-left: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.fleet-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ffff 0%, #0080ff 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* ========== DASHBOARD HEADERS ========== */
+.dashboard h2 {
+  color: #00ffff !important;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6) !important;
+  font-family: 'Orbitron', monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ========== LOADING STATES ========== */
+.dashboard-loading,
+.loading-container {
+  background: #0a0e1a !important;
+}
+
+.dashboard-loading p {
+  color: #00ffff !important;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6) !important;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+/* ========== GLOW EFFECT ========== */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+  }
+}
+
+.table-container,
+.form-card,
+.stat-card {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
